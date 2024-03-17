@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function showMenu() {
-          navLinks.style.top = "85px";
+          navLinks.style.top = "80px";
         }
 
         function hideMenu() {
