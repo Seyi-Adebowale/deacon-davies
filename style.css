@@ -116,10 +116,10 @@ nav ul li a:hover,
 @media screen and (max-width: 1024px) {
   nav {
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     background-color: var(--color-black);
     /* height: 30dvh; */
-    width: 50%;
+    width: 65%;
     top: -1000px;
     right: 0;
     padding: 20px 0;
@@ -272,6 +272,7 @@ nav ul li a:hover,
 .swiper-body p{
     color: var(--color-white);
     font-size: 50px;
+    text-align: center;
 }
 .swipe1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -421,8 +422,8 @@ nav ul li a:hover,
 .menu__btn--open {
   background-color: var(--color-white);
   color: var(--color-gold);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
