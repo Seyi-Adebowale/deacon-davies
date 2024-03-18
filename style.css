@@ -1,9 +1,11 @@
 :root {
-  --color-gold: #ee1b24;
+  --color-red: #ee1b24;
   --color-black: #2e2e2e;
   --color-white: #fff;
   --color-grey: #f9f9f9;
   --color-shadow: #f3f3f3;
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 18px !important;
 }
 * {
   box-sizing: border-box;
@@ -67,14 +69,14 @@ nav ul li a {
 }
 nav ul li a:hover,
 #navlinks ul li a.selected {
-  background-color: var(--color-gold);
+  background-color: var(--color-red);
 }
 .menu-icon {
   display: none !important;
 }
 .menu__btn--open {
   background-color: var(--color-white);
-  color: var(--color-gold);
+  color: var(--color-red);
   padding: 15px;
   border-radius: 10px;
   font-size: 14px;
@@ -121,7 +123,7 @@ nav ul li a:hover,
     text-align: center;
   }
   .menu-icon:hover {
-    color: var(--color-gold);
+    color: var(--color-red);
   }
 }
 @media screen and (max-width: 900px) {
@@ -173,30 +175,21 @@ nav ul li a:hover,
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("img/pexels-luis-quintero-2014775.jpg");
 }
-.swiper-btn-next,
-.swiper-btn-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: var(--color-gold);
+.swiper-button-next,
+.swiper-button-prev {
+  /* width: 30px; */
+  /* height: 20px; */
+  background-color: rgba(238, 27, 36, 0.6);
   color: var(--color-white);
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  line-height: 30px;
+  padding: 20px;
+  /* line-height: 30px; */
   cursor: pointer;
-  z-index: 2;
 }
-.swiper-btn-next {
-  right: 10px;
-}
-.swiper-btn-prev {
-  left: 10px;
-}
-.swiper-btn-next:hover,
-.swiper-btn-prev:hover {
-  opacity: 0.7;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--color-red);
 }
 .footer-container {
   display: flex;
@@ -238,7 +231,7 @@ nav ul li a:hover,
 .btn-main {
   border-radius: 10rem;
   color: var(--color-white);
-  background-color: var(--color-gold);
+  background-color: var(--color-red);
   letter-spacing: 1px;
   font-weight: bold;
   animation: slideInBottom 1s ease-out 5.8s backwards;

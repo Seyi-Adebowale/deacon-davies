@@ -86,6 +86,10 @@ var swiper = new Swiper(".swiper", {
     delay: 8000,
     disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
 });
 
 // Function to pause the Swiper slideshow
@@ -97,15 +101,3 @@ function pauseSlideshow() {
 function resumeSlideshow() {
   swiper.autoplay.start();
 }
-
-document
-  .querySelector(".swiper-btn-next")
-  .addEventListener("click", function () {
-    swiper.slideNext();
-  });
-
-document
-  .querySelector(".swiper-btn-prev")
-  .addEventListener("click", function () {
-    swiper.slidePrev();
-  });
