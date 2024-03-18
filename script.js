@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         function toggleMenu() {
           if (isMenuOpen) {
             hideMenu();
+            resumeSlideshow(); // Resume the slideshow when menu is closed
           } else {
             showMenu();
+            pauseSlideshow(); // Pause the slideshow when menu is opened
           }
           isMenuOpen = !isMenuOpen;
         }
@@ -81,10 +83,21 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   loop: true,
   autoplay: {
-    delay: 10000,
+    delay: 8000,
     disableOnInteraction: false,
   },
 });
+
+// Function to pause the Swiper slideshow
+function pauseSlideshow() {
+  swiper.autoplay.stop();
+}
+
+// Function to resume the Swiper slideshow
+function resumeSlideshow() {
+  swiper.autoplay.start();
+}
+
 document
   .querySelector(".swiper-btn-next")
   .addEventListener("click", function () {
