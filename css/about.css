@@ -69,13 +69,17 @@
     justify-content: space-around;
 }
 .panel-text{
-    font-size: 1.8rem;
-    width: 40%;
+    font-size: 1.6rem;
+    width: 45%;
     text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.panel-text p{
+    line-height: 5vh;
+    word-spacing: 5px;
 }
 .name{
     color: var(--color-red);
