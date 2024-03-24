@@ -20,34 +20,33 @@ body {
   font-family: "Inter", sans-serif;
 }
 header {
-  padding: 10px;
-  height: 12dvh;
+  height: 14vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar {
   display: flex;
   width: 100%;
   padding: 0 20px;
   justify-content: space-between;
+  align-items: center;
 }
 nav {
   padding: 0;
-  width: 80%;
+  margin: 0;
+  width: 60%;
   display: flex;
   flex-direction: row;
   gap: 0;
   justify-content: flex-end;
   align-items: center;
 }
-.logo {
-  width: 200px;
-}
 .logo img {
-  width: 100%;
-  object-fit: cover;
-  transform: scale(1.2);
+  width: 180px;
 }
 .logo img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 nav ul {
   list-style: none;
@@ -64,12 +63,19 @@ nav ul li a {
   color: var(--color-white);
   font-weight: bold;
   transition: 0.3s;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 5px;
 }
 nav ul li a:hover,
 #navlinks ul li a.selected {
   background-color: var(--color-red);
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-black);
+  z-index: 99;
 }
 .menu-icon {
   display: none !important;
@@ -82,9 +88,14 @@ nav ul li a:hover,
   font-size: 14px;
   font-weight: bold;
 }
+@media screen and (max-width: 1210px) {
+  nav {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 1120px) {
   nav {
-    width: 95%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -161,19 +172,19 @@ nav ul li a:hover,
 }
 .swipe1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("img/unsplash_HGdGqzjbvZA.png");
+    url("../img/unsplash_HGdGqzjbvZA.png");
 }
 .swipe2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("img/pexels-thomas-shockey-6290721.jpg");
+    url("../img/pexels-thomas-shockey-6290721.jpg");
 }
 .swipe3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("img/pexels-sơn-bờm-1773113.jpg");
+    url("../img/pexels-sơn-bờm-1773113.jpg");
 }
 .swipe4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("img/pexels-luis-quintero-2014775.jpg");
+    url("../img/pexels-luis-quintero-2014775.jpg");
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -193,7 +204,8 @@ nav ul li a:hover,
 }
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -205,6 +217,7 @@ nav ul li a:hover,
 @media screen and (max-width: 480px) {
   .footer-container {
     flex-direction: column;
+    gap: 0px;
   }
   .footer-container a {
     align-self: flex-start;

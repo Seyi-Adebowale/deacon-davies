@@ -101,3 +101,16 @@ function pauseSlideshow() {
 function resumeSlideshow() {
   swiper.autoplay.start();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var header = document.querySelector(".header");
+  var scrollThreshold = 400;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  });
+});
