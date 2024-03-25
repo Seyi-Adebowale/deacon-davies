@@ -34,24 +34,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuBtnOpen.addEventListener("click", toggleMenu);
 
-        const navLink = container.querySelectorAll("#navlinks ul li a");
-        const currentPage = location.pathname;
-
-        navLink.forEach((link) => {
-          const linkText = link.innerHTML.trim();
-          const linkPath = link.getAttribute("href");
-
+        const nav = document.querySelectorAll(".header__nav ul li");
+        for (let i = 0; i < nav.length; i++) {
           if (
-            linkText === "Home" &&
-            (currentPage === "/" || currentPage.includes("index"))
+            nav[i].innerHTML.includes("Home") &&
+            (location.pathname === "/" || location.pathname.includes("index"))
           ) {
-            link.classList.add("selected");
-          } else if (currentPage.includes(linkPath)) {
-            link.classList.add("selected");
+            nav[0].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("About") &&
+            location.pathname.includes("about")
+          ) {
+            nav[i].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("Media") &&
+            location.pathname.includes("media")
+          ) {
+            nav[i].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("Programmes") &&
+            location.pathname.includes("programmes")
+          ) {
+            nav[i].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("Downloads") &&
+            location.pathname.includes("downloads")
+          ) {
+            nav[i].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("Contact") &&
+            location.pathname.includes("contact")
+          ) {
+            nav[i].classList.add("selected");
+          } else if (
+            nav[i].innerHTML.includes("Give") &&
+            location.pathname.includes("give")
+          ) {
+            nav[i].classList.add("selected");
           } else {
-            link.classList.remove("selected");
+            nav[i].classList.remove("selected");
           }
-        });
+        }
       })
 
       .catch((error) => {
