@@ -85,6 +85,11 @@
     letter-spacing: 0px;
     /* line-height: 8vh; */
 }
+@media (max-width: 1080px){
+  .panel-heading h1{
+    font-size: 4rem;
+  }
+}
 .panel-heading h1:first-child{
     color: #212529;
 }
