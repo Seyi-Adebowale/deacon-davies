@@ -76,7 +76,7 @@ nav ul li a {
   }
 }
 .dropdown-content {
-  /* display: none; */
+  display: none;
   position: absolute;
   background-color: var(--color-black);
   min-width: 160px;
