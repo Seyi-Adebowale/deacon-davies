@@ -74,12 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownToggle = document.querySelector(".dropdown-toggle");
         const dropdownContent = document.querySelector(".dropdown-content");
 
+          // Function to show dropdown content
+          function showDropdown() {
+            dropdownContent.style.display = "block";
+          }
+
+          // Function to hide dropdown content
+          function hideDropdown() {
+            dropdownContent.style.display = "none";
+          }
+          
         // Function to toggle visibility of dropdown content
         function toggleDropdown() {
-          if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
+          // Check if dropdown content is currently visible
+          const isDropdownVisible = dropdownContent.style.display === "block";
+
+        
+
+          // Toggle the visibility based on its current state
+          if (isDropdownVisible) {
+            hideDropdown();
           } else {
-            dropdownContent.style.display = "block";
+            showDropdown();
           }
         }
 
@@ -91,23 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Close the dropdown when clicking outside of it
         document.addEventListener("click", function (e) {
-          if (
-            !dropdownToggle.contains(e.target) &&
-            !dropdownContent.contains(e.target)
-          ) {
-            dropdownContent.style.display = "none";
+          if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+            hideDropdown();
           }
         });
 
-        // Function to show dropdown content
-        function showDropdown() {
-          dropdownContent.style.display = "block";
-        }
 
-        // Function to hide dropdown content
-        function hideDropdown() {
-          dropdownContent.style.display = "none";
-        }
+
 
         // Event listener for mouseenter event on dropdown toggle
         dropdownToggle.addEventListener("mouseenter", function () {
