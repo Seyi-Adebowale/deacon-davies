@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function toggleDropdown() {
           if (dropdownContent.style.display === "block") {
             dropdownContent.style.display = "none";
-          } else {
+          } else if(dropdownContent.style.display === "none"){
             dropdownContent.style.display = "block";
           }
         }
