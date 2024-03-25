@@ -64,7 +64,7 @@ nav ul li a {
   color: var(--color-white);
   text-transform: uppercase;
   transition: 0.3s;
-  font-size: 1.1rem;
+  font-size: 11px;
   padding: 5px;
 }
 #navlinks ul li a.selected {
@@ -144,7 +144,7 @@ nav ul li a {
   }
   nav ul li a {
     color: var(--color-white);
-    font-size: 1.8rem;
+    font-size: 13px;
   }
   .menu-icon {
     display: block !important;
@@ -160,12 +160,12 @@ nav ul li a {
 }
 @media screen and (max-width: 900px) {
   html {
-    font-size: 55%;
+    font-size: 65%;
   }
 }
 @media screen and (max-width: 568px) {
   html {
-    font-size: 50%;
+    font-size: 60%;
   }
 }
 .footer-container {

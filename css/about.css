@@ -76,6 +76,11 @@
     font-size: 4rem;
   }
 }
+@media (max-width: 768px){
+  .panel-heading h1{
+    font-size: 3rem;
+  }
+}
 .panel-heading h1:first-child{
     color: #212529;
 }
@@ -85,7 +90,7 @@
 .panel-text{
     font-size: 1.6rem;
     width: 47%;
-    text-align: justify;
+    /* text-align: justify; */
     padding: 0;
 }
 .panel-text p{
@@ -104,7 +109,7 @@
 .panel-box img{
     width: 45%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     .panel-box {
       flex-direction: column;
       margin: auto;
