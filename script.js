@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const dropdownToggle = document.querySelector(".dropdown-toggle");
         const dropdownContent = document.querySelector(".dropdown-content");
-
+      
         // Function to toggle visibility of dropdown content
         function toggleDropdown() {
           if (dropdownContent.style.display === "block") {
@@ -82,13 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownContent.style.display = "block";
           }
         }
-
+      
         // Toggle dropdown content when clicking the toggle button
         dropdownToggle.addEventListener("click", function (e) {
           e.preventDefault();
           toggleDropdown();
         });
-
+      
         // Close the dropdown when clicking outside of it
         document.addEventListener("click", function (e) {
           if (
