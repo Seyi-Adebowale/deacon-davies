@@ -68,12 +68,13 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 5px;
 }
-nav ul li a:hover,
 #navlinks ul li a.selected {
   background-color: var(--color-red);
 }
-.dropdown-content.open {
-  display: block;
+@media (hover: hover) {
+  nav ul li a:hover {
+    background-color: var(--color-red);
+  }
 }
 .dropdown-content {
   display: none;
@@ -93,12 +94,9 @@ nav ul li a:hover,
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: var(--color-red);
 }
-
-
 
 .fixed {
   position: fixed;

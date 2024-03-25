@@ -52,11 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ) {
             nav[i].classList.add("selected");
           } else if (
-            nav[i].innerHTML.includes("Programmes") &&
-            location.pathname.includes("programmes")
-          ) {
-            nav[i].classList.add("selected");
-          } else if (
             nav[i].innerHTML.includes("Downloads") &&
             location.pathname.includes("downloads")
           ) {
@@ -79,12 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownToggle = document.querySelector(".dropdown-toggle");
         const dropdownContent = document.querySelector(".dropdown-content");
 
-        console.log("Dropdown toggle:", dropdownToggle);
-        console.log("Dropdown content:", dropdownContent);
+        // Function to toggle visibility of dropdown content
+        function toggleDropdown() {
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        }
 
+        // Toggle dropdown content when clicking the toggle button
         dropdownToggle.addEventListener("click", function (e) {
           e.preventDefault();
-          dropdownContent.classList.toggle("open");
+          toggleDropdown();
         });
 
         // Close the dropdown when clicking outside of it
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             !dropdownToggle.contains(e.target) &&
             !dropdownContent.contains(e.target)
           ) {
-            dropdownContent.classList.remove("open");
+            dropdownContent.style.display = "none";
           }
         });
       })
