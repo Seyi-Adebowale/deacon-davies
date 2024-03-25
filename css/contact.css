@@ -3,3 +3,21 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../img/pexels-luis-quintero-2014775.jpg");
 }
+.content{
+    display: flex;
+    margin: 40px auto;
+}
+.content-child{
+    width: 33.333%;
+}
+.contact-img img{
+    object-fit: cover;
+    object-position: top;
+}
+.contact-info{
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+.contact-form{
+    background-color: var(--color-grey);
+}

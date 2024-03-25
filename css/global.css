@@ -208,11 +208,11 @@ nav ul li a {
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 .btn-main {
-  border-radius: 10rem;
+  /* border-radius: 10rem; */
   color: var(--color-white);
   background-color: var(--color-red);
   letter-spacing: 1px;
-  font-weight: bold;
+  /* font-weight: bold; */
   animation: slideInBottom 1s ease-out 5.8s backwards;
 }
 .btn-main:hover::after {
