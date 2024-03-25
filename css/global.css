@@ -208,12 +208,10 @@ nav ul li a {
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 .btn-main {
-  /* border-radius: 10rem; */
   color: var(--color-white);
   background-color: var(--color-red);
   letter-spacing: 1px;
-  /* font-weight: bold; */
-  animation: slideInBottom 1s ease-out 5.8s backwards;
+  /* animation: slideInBottom 1s ease-out 5.8s backwards; */
 }
 .btn-main:hover::after {
   transform: scaleY(1.6) scaleX(1.4);
@@ -228,7 +226,7 @@ nav ul li a {
   top: 0;
   left: 0;
   z-index: -1;
-  border-radius: 10rem;
+  /* border-radius: 10rem; */
   transition: all 0.5s;
 }
 .sub-header {
@@ -248,52 +246,52 @@ nav ul li a {
   transform: translate(-50%, -50%);
 }
 .footer2 {
-    padding: 30px 0 10px;
-    background-color: var(--color-black);
-    color: white;
-    margin-top: 20px;
-  }
-  .contact-icons a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .contact-icons a:hover i {
-    background-color: var(--color-white);
-  }
-  .contact-icons a:hover i {
-    color: var(--color-red);
-  }
-  .contact-icons a:focus i {
-    background-color: var(--color-white);
-  }
-  .contact-icons {
-    display: flex;
-    justify-content: space-around;
-    width: 250px;
-    margin: 0 auto;
-  }
-  .contact-icons i {
-    background-color: var(--color-red);
-    padding: 7px 0;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 50%;
-  }
-  .footer-text {
-    text-align: center;
-  }
-  .footer-text p {
-    margin: 0;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: var(--color-white);
-  }
-  .footer-text p.copyright {
-    padding: 10px;
-  }
-  .footer-text {
-    margin: 0;
-    font-size: 1.6rem;
-  }
+  padding: 30px 0 10px;
+  background-color: var(--color-black);
+  color: white;
+  margin-top: 20px;
+}
+.contact-icons a {
+  text-decoration: none;
+  color: #fff;
+}
+.contact-icons a:hover i {
+  background-color: var(--color-white);
+}
+.contact-icons a:hover i {
+  color: var(--color-red);
+}
+.contact-icons a:focus i {
+  background-color: var(--color-white);
+}
+.contact-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+  margin: 0 auto;
+}
+.contact-icons i {
+  background-color: var(--color-red);
+  padding: 7px 0;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 50%;
+}
+.footer-text {
+  text-align: center;
+}
+.footer-text p {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--color-white);
+}
+.footer-text p.copyright {
+  padding: 10px;
+}
+.footer-text {
+  margin: 0;
+  font-size: 1.6rem;
+}

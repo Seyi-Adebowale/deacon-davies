@@ -65,6 +65,88 @@
       </div>
       <div class="content-child contact-form">
         <h1>Get in Touch</h1>
+
+        <div class="form section-animated" id="message-form">
+          <div class="contactus-form">
+            <!-- <h3>SEND US A MESSAGE</h3> -->
+            <form>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  required
+                  autocomplete="off"
+                />
+                <label for="name">Name</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  required
+                  autocomplete="off"
+                />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone"
+                  required
+                  autocomplete="off"
+                />
+                <label for="phone">Phone</label>
+              </div>
+              <div class="form-group">
+                <select name="country" id="country" required>
+                  <option value="">Country</option>
+                </select>
+                <label for="country">Country</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  placeholder="State"
+                  required
+                  autocomplete="off"
+                />
+                <label for="state">State</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="town"
+                  id="town"
+                  placeholder="Town"
+                  required
+                  autocomplete="off"
+                />
+                <label for="town">Town</label>
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="8"
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  required
+                  autocomplete="off"
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+  
+              <button type="submit" class="btnn">Submit Now</button>
+            </form>
+          </div>
+          </div>
       </div>
     </div>
 
@@ -82,6 +164,30 @@
       </div>
     </section>
 
+    <script>
+      // Fetch country data from the REST Countries API
+      fetch("https://restcountries.com/v3.1/all")
+        .then(response => response.json())
+        .then(data => {
+          // Sort the country data alphabetically by country name
+          data.sort((a, b) => {
+            return a.name.common.localeCompare(b.name.common);
+          });
+    
+          const countrySelect = document.getElementById("country");
+          // Loop through the sorted country data and create options for the select dropdown
+          data.forEach(country => {
+            const option = document.createElement("option");
+            option.value = country.name.common;
+            option.text = country.name.common;
+            countrySelect.appendChild(option);
+          });
+        })
+        .catch(error => {
+          console.error("Error fetching countries:", error);
+        });
+    </script>
+    
     <script src="script.js"></script>
   </body>
 </html>
