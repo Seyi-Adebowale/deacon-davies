@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownToggle = document.querySelector(".dropdown-toggle");
         const dropdownContent = document.querySelector(".dropdown-content");
 
+        dropdownContent.style.display = "none";
         // Function to toggle visibility of dropdown content
         function toggleDropdown() {
           if (dropdownContent.style.display === "block") {
