@@ -75,6 +75,27 @@ document.addEventListener("DOMContentLoaded", function () {
             nav[i].classList.remove("selected");
           }
         }
+
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const dropdownContent = document.querySelector(".dropdown-content");
+
+        console.log("Dropdown toggle:", dropdownToggle);
+        console.log("Dropdown content:", dropdownContent);
+
+        dropdownToggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          dropdownContent.classList.toggle("open");
+        });
+
+        // Close the dropdown when clicking outside of it
+        document.addEventListener("click", function (e) {
+          if (
+            !dropdownToggle.contains(e.target) &&
+            !dropdownContent.contains(e.target)
+          ) {
+            dropdownContent.classList.remove("open");
+          }
+        });
       })
 
       .catch((error) => {
@@ -110,9 +131,9 @@ var swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 // Function to pause the Swiper slideshow
