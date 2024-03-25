@@ -231,3 +231,19 @@ nav ul li a {
   border-radius: 10rem;
   transition: all 0.5s;
 }
+.sub-header {
+  height: 300px;
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.sub-header h3 {
+  color: var(--color-white);
+  font-size: 35px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
