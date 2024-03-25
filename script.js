@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuBtnOpen.addEventListener("click", toggleMenu);
 
-        const nav = document.querySelectorAll(".header__nav ul li");
+        const nav = document.querySelectorAll("#navlinks ul li a");
         for (let i = 0; i < nav.length; i++) {
           if (
             nav[i].innerHTML.includes("Home") &&
