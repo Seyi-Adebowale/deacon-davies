@@ -75,6 +75,9 @@ nav ul li a {
   nav ul li a:hover {
     background-color: var(--color-red);
   }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 .dropdown-content {
   display: none;
@@ -84,9 +87,7 @@ nav ul li a {
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
 
 .dropdown-content a {
   color: var(--color-white);
@@ -216,14 +217,11 @@ nav ul li a {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  /* width: 30px; */
-  /* height: 20px; */
   background-color: rgba(238, 27, 36, 0.6);
   color: var(--color-white);
   font-size: 18px;
   text-align: center;
   padding: 20px;
-  /* line-height: 30px; */
   cursor: pointer;
 }
 .swiper-button-next:hover,

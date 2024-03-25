@@ -70,6 +70,7 @@
 .panel-box{
     display: flex;
     justify-content: space-around;
+    padding: 0;
 }
 .panel-heading{
     text-align: right;
@@ -94,10 +95,7 @@
     font-size: 1.6rem;
     width: 47%;
     text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
 }
 .panel-text p{
     line-height: 4vh;
@@ -105,6 +103,8 @@
 }
 .panel-text p.intro{
     width: 100%;
+    padding: 0;
+    margin: 0 0 20px;
 }
 .name{
     color: var(--color-red);
