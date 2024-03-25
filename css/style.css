@@ -70,9 +70,9 @@ nav ul li a {
 #navlinks ul li a.selected {
   background-color: var(--color-red);
 }
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 @media (hover: hover) {
   nav ul li a:hover {
     background-color: var(--color-red);
