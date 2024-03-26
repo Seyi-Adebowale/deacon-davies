@@ -1,0 +1,95 @@
+@import "global.css";
+.sub-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/kelly-sikkema-X-etICbUKec-unsplash.jpg");
+  background-position: top;
+}
+.content{
+   background-color: rgba(0, 0, 0, 0.05);
+   padding: 40px 0;
+}
+#recordingsContainer{
+    text-align: center;
+}
+#recordingsContainer span{
+    font-size: 1.8rem;
+}
+/* Style for recording container */
+.recording {
+  padding: 10px;
+  border: 4px solid #ccc;
+  width: 85%;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left; /* Vertically center items */
+}
+@media (max-width: 520px){
+    .recording{
+        flex-direction: column;
+    }
+    .downloadBtn{
+        margin: 10px 0;
+    }
+}
+/* Style for recording info */
+.recording-info {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  margin-right: 10px;
+  width: 90%; /* Add margin for spacing */
+}
+
+.recording-info p {
+  margin: 5px 0;
+  word-wrap: break-word;
+  font-size: 1.5rem; /* Adjust vertical spacing */
+}
+.recording-info h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+/* Style for download button */
+.downloadBtn {
+  padding: 8px 16px;
+  background-color: var(--color-red);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+#month,
+#year,
+#searchBtn, #showAllBtn {
+  margin: 0 10px 10px 0;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#searchBtn, #showAllBtn, .downloadBtn {
+  background-color: var(--color-red);
+  color: #fff;
+  font-family: inherit;
+  transition: 0.2s;
+}
+#searchBtn:hover, #showAllBtn:hover, .downloadBtn:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+select{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: inherit;
+}

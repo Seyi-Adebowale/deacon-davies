@@ -1,0 +1,86 @@
+@import "global.css";
+.sub-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/MEDIA.avif");
+    background-position:center;
+    
+}
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 0;
+  width: 90%;
+  position: relative;
+}
+.tabs {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tab {
+  cursor: pointer;
+  margin: auto;
+  padding: 10px 15px;
+  width: 200px;
+  text-align: center;
+  border-color:  var(--color-red);
+  border-style: solid;
+  font-size: 16px;
+  display: inline-block;
+  color: var(--color-red);
+}
+iframe, object, embed {
+  width: 550px;
+  height: 320px;
+}
+@media only screen and (max-width: 620px){
+  iframe, object, embed {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 480px){
+  iframe, object, embed {
+    width: 300px;
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .tab {
+    margin-bottom: 10px;
+  }
+}
+.panels {
+  background: var(--color-white);
+  min-height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 30px;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+  width: 100%;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab, .tab:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+}

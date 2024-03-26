@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           function hideDropdown() {
             dropdownContent.style.display = "none";
           }
-          
+
         // Function to toggle visibility of dropdown content
         function toggleDropdown() {
           // Check if dropdown content is currently visible
@@ -174,15 +174,15 @@ function resumeSlideshow() {
   swiper.autoplay.start();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var header = document.querySelector(".header");
-  var scrollThreshold = 400;
+// document.addEventListener("DOMContentLoaded", function () {
+//   var header = document.querySelector(".header");
+//   var scrollThreshold = 400;
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add("fixed");
-    } else {
-      header.classList.remove("fixed");
-    }
-  });
-});
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY > scrollThreshold) {
+//       header.classList.add("fixed");
+//     } else {
+//       header.classList.remove("fixed");
+//     }
+//   });
+// });

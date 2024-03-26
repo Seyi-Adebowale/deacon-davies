@@ -18,6 +18,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: "Inter", sans-serif;
+  position: relative;
 }
 header {
   height: 14vh;
@@ -235,10 +236,12 @@ nav ul li a {
   background-size: cover;
   width: 100%;
   position: relative;
+  text-align: center;
 }
 .sub-header h3 {
   color: var(--color-white);
   font-size: 35px;
+  width: 100%;
   letter-spacing: 2px;
   position: absolute;
   top: 70%;
@@ -250,6 +253,10 @@ nav ul li a {
   background-color: var(--color-black);
   color: white;
   margin-top: 20px;
+  display: block;
+  width: 100%;
+  /* position: absolute; */
+  bottom: 0;
 }
 .contact-icons a {
   text-decoration: none;

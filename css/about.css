@@ -109,7 +109,7 @@
 .panel-box img{
     width: 45%;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1080px) {
     .panel-box {
       flex-direction: column;
       margin: auto;
