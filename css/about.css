@@ -39,12 +39,10 @@
     margin-bottom: 5px;
   }
 }
-
 .panels {
   background: #fff;
   box-shadow: 0 2rem 2rem #00000080;
   min-height: 200px;
-  /* width: 90%; */
   border-radius: 3px;
   overflow: hidden;
   padding: 20px;
@@ -62,14 +60,12 @@
     text-align: right;
     width: 100%;
     margin-bottom: 10px;
-    /* outline: 1px solid red; */
 }
 .panel-heading h1{
     margin: 0;
     font-family: "Staatliches", sans-serif;
     font-size: 5rem;
     letter-spacing: 0px;
-    /* line-height: 8vh; */
 }
 @media (max-width: 1080px){
   .panel-heading h1{

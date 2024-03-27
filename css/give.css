@@ -1,0 +1,87 @@
+@import "global.css";
+.sub-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/allef-vinicius-fJTqyZMOh18-unsplash.jpg");
+  background-position: top;
+}
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 0;
+  width: 90%;
+  position: relative;
+}
+.tabs {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tab {
+  cursor: pointer;
+  margin: auto;
+  padding: 10px 15px;
+  width: 200px;
+  text-align: center;
+  border-color: var(--color-red);
+  border-style: solid;
+  font-size: 16px;
+  display: inline-block;
+  color: var(--color-red);
+}
+
+@media only screen and (max-width: 1080px) {
+  .tab {
+    margin-bottom: 10px;
+  }
+}
+.panels {
+  background: var(--color-white);
+  min-height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+  width: 100%;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+.tab:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+.panel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 4rem;
+    margin: 30px auto;
+}
+.panel-item p{
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Staatliches', sans-serif;
+    letter-spacing: 2px;
+}
+.panel-item p.panel-item-title{
+    font-size: 2rem;
+    color: #6c757d;
+}
