@@ -1,0 +1,161 @@
+@import "global.css";
+.sub-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/alex-woods-pZVi92S-ZMs-unsplash.jpg");
+  background-position: center;
+}
+.form {
+  padding: 1% 4%;
+  width: 80%;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.form .contactus-form {
+  margin: 0 auto 3rem;
+  position: relative;
+}
+.form .contactus-form select {
+  color: #777777;
+  background-color: white;
+}
+.form .contactus-form input:not([type="radio"])::-moz-placeholder,
+.form .contactus-form textarea::-moz-placeholder,
+.form .contactus-form select::-moz-placeholder {
+  font-size: 1.5rem;
+}
+.form .contactus-form input:not([type="radio"])::placeholder,
+.form .contactus-form textarea::placeholder,
+.form .contactus-form label,
+.form .contactus-form select {
+  font-size: 1.5rem;
+}
+.form .contactus-form label {
+  padding: 2.3rem 1.5rem;
+  color: #777777;
+  transition: all 0.3s;
+}
+.form .contactus-form input:not([type="radio"]):-moz-placeholder-shown + label,
+.form .contactus-form textarea:-moz-placeholder-shown + label,
+.form .contactus-form select:not([placeholder]) + label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40rem);
+}
+.form .contactus-form input:not([type="radio"]):placeholder-shown + label,
+.form .contactus-form textarea:placeholder-shown + label,
+.form .contactus-form select:not([placeholder]) + label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40rem);
+}
+.form .contactus-form input:not([type="radio"]),
+.form .contactus-form textarea,
+.form .contactus-form select {
+  width: 100%;
+  display: block;
+  padding: 1.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+}
+.form .contactus-form textarea {
+  resize: none;
+}
+.form .contactus-form input:not([type="radio"]):focus,
+.form .contactus-form textarea:focus {
+  border-bottom: 3px solid #008000;
+}
+.form .contactus-form input:not([type="radio"]):focus:invalid,
+.form .contactus-form textarea:focus:invalid {
+  border-bottom: 3px solid #ff0000;
+}
+.form .contactus-form .form-group {
+  margin-bottom: 1.2rem;
+}
+.form .contactus-form .btnn {
+  border: none;
+  padding: 20px;
+  margin: auto;
+  display: block;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-size: 1.4rem;
+}
+.form .contactus-form .btnn:hover {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.radio-group{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 20px 0;
+}
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 0;
+  width: 90%;
+  position: relative;
+}
+.tabs {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tab {
+  cursor: pointer;
+  margin: auto;
+  padding: 10px 15px;
+  max-width: 340px;
+  text-align: center;
+  border-color: var(--color-red);
+  border-style: solid;
+  font-size: 16px;
+  display: inline-block;
+  color: var(--color-red);
+}
+
+@media only screen and (max-width: 1080px) {
+  .tab {
+    margin-bottom: 10px;
+  }
+}
+.panels {
+  background: var(--color-white);
+  min-height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+  width: 100%;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+.tab:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+}
