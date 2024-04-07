@@ -34,10 +34,43 @@
 .swipe3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../img/pexels-sơn-bờm-1773113.jpg");
+    position: relative;
 }
 .swipe4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../img/pexels-luis-quintero-2014775.jpg");
+}
+.swiper-body2{
+  background-color: rgba(238, 27, 36, 0.2);
+  position: absolute;
+  top: 45%;
+  left: 67%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 20px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 768px){
+  .swiper-body2{
+    left: 50%;
+  }
+}
+.swiper-body2 h3{
+  font-size: 2rem;
+  margin: 0;
+}
+.swiper-body2 h1{
+  font-size: 6rem;
+  margin: 0;
+  font-family: "Merienda", cursive;
+}
+.swiper-body2 p{
+  font-size: 1.6rem;
+  margin: 0;
 }
 .swiper-button-next,
 .swiper-button-prev {
